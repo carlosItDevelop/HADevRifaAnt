@@ -1,0 +1,22 @@
+﻿@model HADev.Delivery.Domain.Models.Cidade
+
+@{
+    ViewData["Title"] = "Cidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes da Cidade</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <partial name="_Details_Delete" />
+
+
+            <div class="form-group">
+                <a asp-controller="Cidade" asp-action="Edit" asp-route-id="@Model.CidadeId" class="btn btn-info">Editar</a> &nbsp;&nbsp;&nbsp;
+                <a asp-controller="Cidade" asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

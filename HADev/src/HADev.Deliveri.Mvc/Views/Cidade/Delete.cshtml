@@ -1,0 +1,26 @@
+﻿@model HADev.Delivery.Domain.Models.Cidade
+
+@{
+    ViewData["Title"] = "Cidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Deletar Cidade</h2>
+
+<h3>Deseja realmente remover esse registro ?</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <partial name="_Details_Delete" />
+
+            <div class="form-group">
+                <input type="hidden" asp-for="CidadeId" />
+                <input type="submit" value="Deletar" class="btn btn-danger" /> &nbsp;&nbsp;&nbsp;
+                <a asp-controller="Cidade" asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿@using HADev.Delivery.Domain.Enums
+@model HADev.Delivery.Domain.Models.Cidade
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado.Nome)
+        </dd>
+    </dl>

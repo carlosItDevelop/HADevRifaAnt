@@ -1,0 +1,56 @@
+﻿@model IEnumerable<HADev.Delivery.Domain.Models.Bairro>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Lista de Bairros</h2>
+
+<p>
+    <a asp-controller="Bairro" asp-action="Create" class="btn btn-info"><span class="fa fa-plus-circle"></span>&nbsp;Adicionar</a>
+</p>
+<table class="table table-bordered table-hover dataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade.Nome)
+                </td>
+                <td>
+                    <a asp-controller="Bairro" asp-action="Edit" asp-route-id="@item.BairroId"><span class="fa fa-pencil"></span></a> &nbsp;&nbsp;
+                    <a asp-controller="Bairro" asp-action="Details" asp-route-id="@item.BairroId"><span class="fa fa-search"></span></a>&nbsp;&nbsp;
+                    <a asp-controller="Bairro" asp-action="Delete" asp-route-id="@item.BairroId"><span class="fa fa-trash"></span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

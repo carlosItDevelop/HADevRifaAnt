@@ -1,0 +1,22 @@
+﻿@model HADev.Delivery.Domain.Models.Visita
+
+@{
+    ViewData["Title"] = "Visita";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes da Visita</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <partial name="_Details_Delete" />
+
+
+            <div class="form-group">
+                <a asp-controller="Visita" asp-action="Edit" asp-route-id="@Model.VisitaId" class="btn btn-info">Editar</a> &nbsp;&nbsp;&nbsp;
+                <a asp-controller="Visita" asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

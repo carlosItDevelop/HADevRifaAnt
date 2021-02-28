@@ -1,0 +1,154 @@
+﻿@model HADev.Delivery.Domain.Models.Pessoa
+@using HADev.Delivery.Domain.Enums
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Pessoa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cpf" class="control-label"></label>
+                <input asp-for="Cpf" class="form-control" />
+                <span asp-validation-for="Cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascimento" class="control-label"></label>
+                <input asp-for="DataNascimento" class="form-control" />
+                <span asp-validation-for="DataNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rg" class="control-label"></label>
+                <input asp-for="Rg" class="form-control" />
+                <span asp-validation-for="Rg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgaoEspedidor" class="control-label"></label>
+                <input asp-for="OrgaoEspedidor" class="form-control" />
+                <span asp-validation-for="OrgaoEspedidor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexo" class="control-label"></label>
+                <select asp-for="Sexo" asp-items="Html.GetEnumSelectList<Sexo>()" class="form-control">
+                    <option selected="selected" value=""></option>
+                </select>
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCivil" class="control-label"></label>
+                <select asp-for="Sexo" asp-items="Html.GetEnumSelectList<EstadoCivil>()" class="form-control">
+                    <option selected="selected" value=""></option>
+                </select>
+                <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GrupoPessoaId" class="control-label"></label>
+                <select asp-for="GrupoPessoaId" class="form-control" asp-items="ViewBag.GrupoPessoaId">
+                    <option selected="selected"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeMae" class="control-label"></label>
+                <input asp-for="NomeMae" class="form-control" />
+                <span asp-validation-for="NomeMae" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomePai" class="control-label"></label>
+                <input asp-for="NomePai" class="form-control" />
+                <span asp-validation-for="NomePai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Cliente" /> @Html.DisplayNameFor(model => model.Cliente)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Fornecedor" /> @Html.DisplayNameFor(model => model.Fornecedor)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Vendedor" /> @Html.DisplayNameFor(model => model.Vendedor)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoPessoa" class="control-label"></label>
+                <select asp-for="Sexo" asp-items="Html.GetEnumSelectList<TipoPessoa>()" class="form-control">
+                    <option selected="selected" value=""></option>
+                </select>
+                <span asp-validation-for="TipoPessoa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataCadastro" class="control-label"></label>
+                <input asp-for="DataCadastro" class="form-control" />
+                <span asp-validation-for="DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserCadastroId" class="control-label"></label>
+                <input asp-for="UserCadastroId" class="form-control" />
+                <span asp-validation-for="UserCadastroId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataAlteracao" class="control-label"></label>
+                <input asp-for="DataAlteracao" class="form-control" />
+                <span asp-validation-for="DataAlteracao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAlteracaoId" class="control-label"></label>
+                <input asp-for="UserAlteracaoId" class="form-control" />
+                <span asp-validation-for="UserAlteracaoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Atualizar" /> @Html.DisplayNameFor(model => model.Atualizar)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenhaCDA" class="control-label"></label>
+                <input asp-for="SenhaCDA" class="form-control" />
+                <span asp-validation-for="SenhaCDA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bio" class="control-label"></label>
+                <input asp-for="Bio" class="form-control-lg" />
+                <span asp-validation-for="Bio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

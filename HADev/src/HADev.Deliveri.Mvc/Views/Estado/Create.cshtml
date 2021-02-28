@@ -1,0 +1,21 @@
+﻿@model HADev.Delivery.Domain.Models.Estado
+
+@{
+    ViewData["Title"] = "Estado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Adicionar Estado</h2>
+
+<hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <partial name="_Create_Edit" />
+
+            </form>
+        </div>
+    </div>
+

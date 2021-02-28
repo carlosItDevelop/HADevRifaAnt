@@ -1,0 +1,44 @@
+﻿@model IEnumerable<HADev.Delivery.Domain.Models.Cidade>
+
+@{
+    ViewData["Title"] = "Cidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Lista de Cidades</h2>
+
+<p>
+    <a asp-controller="Cidade" asp-action="Create" class="btn btn-info"><span class="fa fa-plus-circle"></span>&nbsp;Adicionar</a>
+</p>
+<table class="table table-bordered table-hover dataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado.Nome)
+                </td>
+                <td>
+                    <a asp-controller="Cidade" asp-action="Edit" asp-route-id="@item.CidadeId"><span class="fa fa-pencil"></span></a> &nbsp;&nbsp;
+                    <a asp-controller="Cidade" asp-action="Details" asp-route-id="@item.CidadeId"><span class="fa fa-search"></span></a>&nbsp;&nbsp;
+                    <a asp-controller="Cidade" asp-action="Delete" asp-route-id="@item.CidadeId"><span class="fa fa-trash"></span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<HADev.Delivery.Domain.Models.Eleitor>
+
+@{
+    ViewData["Title"] = "Eleitor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Eleitores</h2>
+
+<p>
+    <a asp-controller="Eleitor" asp-action="Create" class="btn btn-info"><span class="fa fa-plus-circle"></span>&nbsp;Adicionar</a>
+</p>
+<table class="table table-bordered table-hover dataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apelido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Celular)
+            </th>
+            
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apelido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Celular)
+                </td>
+                <td>
+                    <a asp-controller="Eleitor" asp-action="Edit" asp-route-id="@item.EleitorId"><span class="fa fa-pencil"></span></a> &nbsp;&nbsp;
+                    <a asp-controller="Eleitor" asp-action="Details" asp-route-id="@item.EleitorId"><span class="fa fa-search"></span></a>&nbsp;&nbsp;
+                    <a asp-controller="Eleitor" asp-action="Delete" asp-route-id="@item.EleitorId"><span class="fa fa-trash"></span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191011182659_Endereco.cs" />
+    <Compile Remove="Migrations\20191011182834_Endereco1.cs" />
+    <Compile Remove="Migrations\20191011190807_Endereco2.cs" />
+    <Compile Remove="Migrations\20191011191323_Endereco2.cs" />
+    <Compile Remove="Migrations\20191016184934_Pessoa.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HADev.Delivery.Domain\HADev.Delivery.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

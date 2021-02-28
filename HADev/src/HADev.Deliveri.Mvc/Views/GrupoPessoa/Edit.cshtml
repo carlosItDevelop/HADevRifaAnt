@@ -1,0 +1,23 @@
+﻿@model HADev.Delivery.Domain.Models.GrupoPessoa
+
+@{
+    ViewData["Title"] = "Grupo de Pessoas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Editar Grupo de Pessoas</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <partial name="_Create_Edit" />
+
+        </form>
+    </div>
+</div>
+
+

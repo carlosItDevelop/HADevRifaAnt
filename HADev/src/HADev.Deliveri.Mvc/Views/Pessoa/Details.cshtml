@@ -1,0 +1,151 @@
+﻿@model HADev.Delivery.Domain.Models.Pessoa
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rg)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rg)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrgaoEspedidor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrgaoEspedidor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoCivil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCivil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GrupoPessoa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GrupoPessoa.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeMae)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeMae)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomePai)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendedor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPessoa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoPessoa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserCadastroId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserCadastroId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAlteracao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataAlteracao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAlteracaoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAlteracaoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Atualizar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Atualizar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SenhaCDA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SenhaCDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

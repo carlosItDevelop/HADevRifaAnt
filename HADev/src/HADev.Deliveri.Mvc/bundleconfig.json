@@ -1,0 +1,35 @@
+[
+  {
+    "outputFileName": "wwwroot/output/bundle.js",
+    "inputFiles": []
+  },
+
+  {
+    "outputFileName": "wwwroot/bundle/JsHADev.js",
+    "inputFiles": [
+      "wwwroot/bower_components/jquery/dist/jquery.min.js",
+      "wwwroot/bower_components/jquery-ui/jquery-ui.min.js",
+      "wwwroot/bower_components/bootstrap/dist/js/bootstrap.min.js",
+      "wwwroot/bower_components/raphael/raphael.min.js",
+      "wwwroot/bower_components/morris.js/morris.min.js",
+      "wwwroot/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js",
+      "wwwroot/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
+      "wwwroot/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
+      "wwwroot/bower_components/jquery-knob/dist/jquery.knob.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundle/JsBudlerMin.js",
+    "inputFiles": [
+      "wwwroot/bower_components/moment/min/moment.min.js",
+      "wwwroot/bower_components/bootstrap-daterangepicker/daterangepicker.js",
+      "wwwroot/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+      "wwwroot/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
+      "wwwroot/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
+      "wwwroot/bower_components/fastclick/lib/fastclick.js",
+      "wwwroot/dist/js/adminlte.min.js",
+      "wwwroot/dist/js/demo.js",
+      "wwwroot/dist/js/pages/dashboard.js"
+    ]
+  }
+]
